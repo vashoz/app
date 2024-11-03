@@ -1,33 +1,24 @@
-import 'package:vashoz/features/auth/presentation/pages/auth_welcome_page.dart';
-import 'package:vashoz/features/orders/presentation/bloc/find_all_bloc.dart';
-import 'package:vashoz/features/products/presentation/bloc/product_cart_bloc.dart';
-
-import '../../features/auth/presentation/pages/auth_page.dart';
+import 'shared.dart';
+import '../config/config.dart';
+import '../../features/auth/auth.dart';
 import '../../features/banner/banner.dart';
-import '../../features/business_information/presentation/bloc/fetch_information_bloc.dart';
+import '../../features/business_information/business_information.dart';
 import '../../features/cart/cart.dart';
 import '../../features/category/category.dart';
 import '../../features/checkout/checkout.dart';
-import '../../features/checkout/presentation/order_success.dart';
 import '../../features/dashboard/dashboard.dart';
 import '../../features/delivery_address/delivery_address.dart';
 import '../../features/filter/filter.dart';
 import '../../features/forgot_password/forgot_password.dart';
-import '../../features/on_board/presentation/pages/onboard.dart';
+import '../../features/on_board/on_board.dart';
 import '../../features/orders/orders.dart';
 import '../../features/payment_method/payment_method.dart';
 import '../../features/product_details/product_details.dart';
-import '../../features/products/presentation/bloc/find_products_bloc.dart';
-import '../../features/products/presentation/pages/popular.dart';
-import '../../features/products/presentation/pages/products_by_category.dart';
 import '../../features/products/products.dart';
-import '../../features/profile/presentation/pages/delete_account_page.dart';
-import '../../features/profile/presentation/pages/web_view_page.dart';
+import '../../features/profile/profile.dart';
 import '../../features/reviews/reviews.dart';
 import '../../features/search/search.dart';
 import '../../features/shipping_method/shipping_method.dart';
-import '../config/config.dart';
-import 'shared.dart';
 
 final router = GoRouter(
   initialLocation: OnboardingPage.path,
@@ -55,8 +46,8 @@ final router = GoRouter(
         final String slug = arguments?['slug'] as String;
         return MultiBlocProvider(
           providers: [
-            BlocProvider(create: (context) => sl<NewArrivalProductsBloc>()..add(NewArrivalProducts())),
-            BlocProvider(create: (context) => sl<FindProductBloc>()..add(FindProduct(slug: slug))),
+            BlocProvider(create: (_) => sl<NewArrivalProductsBloc>()..add(NewArrivalProducts())),
+            BlocProvider(create: (_) => sl<FindProductBloc>()..add(FindProduct(slug: slug))),
             BlocProvider(create: (_) => sl<ProductCartBloc>()),
           ],
           child: const NewArrivalProductsPage(),
@@ -71,8 +62,8 @@ final router = GoRouter(
         final String slug = arguments?['slug'] as String;
         return MultiBlocProvider(
           providers: [
-            BlocProvider(create: (context) => sl<PopularProductsBloc>()..add(const FetchPopularProducts())),
-            BlocProvider(create: (context) => sl<FindProductBloc>()..add(FindProduct(slug: slug))),
+            BlocProvider(create: (_) => sl<PopularProductsBloc>()..add(const FetchPopularProducts())),
+            BlocProvider(create: (_) => sl<FindProductBloc>()..add(FindProduct(slug: slug))),
             BlocProvider(create: (_) => sl<ProductCartBloc>()),
           ],
           child: const PopularProductsPage(),
@@ -105,21 +96,17 @@ final router = GoRouter(
     GoRoute(
       path: DashboardPage.path,
       name: DashboardPage.name,
-      builder: (_, __) => MultiBlocProvider(providers: [
-        BlocProvider(create: (context) => sl<FindBannersBloc>()..add(const FindBanners())),
-        BlocProvider(create: (context) => sl<NewArrivalProductsBloc>()..add(NewArrivalProducts())),
-        BlocProvider(create: (context) => sl<PopularProductsBloc>()..add(const FetchPopularProducts())),
-        BlocProvider(create: (context) => sl<FindFeaturedCategoriesBloc>()..add(const FindFeaturedCategories())),
-        BlocProvider(create: (context) => sl<FetchInformationBloc>()..add(const FetchInformation())),
-        BlocProvider(
-          create: (context) => sl<FindAllBloc>()
-            ..add(
-              const FindAll(
-                guid: '1',
-              ),
-            ),
-        ),
-      ], child: const DashboardPage()),
+      builder: (_, __) => MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => sl<FindBannersBloc>()..add(const FindBanners())),
+          BlocProvider(create: (_) => sl<NewArrivalProductsBloc>()..add(NewArrivalProducts())),
+          BlocProvider(create: (_) => sl<PopularProductsBloc>()..add(const FetchPopularProducts())),
+          BlocProvider(create: (_) => sl<FindFeaturedCategoriesBloc>()..add(const FindFeaturedCategories())),
+          BlocProvider(create: (_) => sl<FetchInformationBloc>()..add(const FetchInformation())),
+          BlocProvider(create: (_) => sl<FindAllBloc>()..add(const FindAll(guid: '1'))),
+        ],
+        child: const DashboardPage(),
+      ),
     ),
     GoRoute(
       path: ProductDetailPage.path,
@@ -130,7 +117,7 @@ final router = GoRouter(
         return MultiBlocProvider(
           providers: [
             BlocProvider(
-              create: (context) => sl<FindProductBloc>()..add(FindProduct(slug: slug)),
+              create: (_) => sl<FindProductBloc>()..add(FindProduct(slug: slug)),
             ),
             BlocProvider(create: (_) => sl<ProductCartBloc>()),
           ],
@@ -145,7 +132,7 @@ final router = GoRouter(
       name: CategoriesPage.name,
       builder: (_, __) => MultiBlocProvider(providers: [
         BlocProvider(
-          create: (context) => sl<FindAllCategoriesBloc>()
+          create: (_) => sl<FindAllCategoriesBloc>()
             ..add(
               const FindAllCategories(),
             ),
@@ -177,13 +164,13 @@ final router = GoRouter(
         return MultiBlocProvider(
           providers: [
             BlocProvider(
-              create: (context) => sl<FindProductsBloc>()
+              create: (_) => sl<FindProductsBloc>()
                 ..add(
                   FindProducts(slug: slug),
                 ),
             ),
             BlocProvider(
-              create: (context) => sl<FindProductBloc>()..add(FindProduct(slug: slug)),
+              create: (_) => sl<FindProductBloc>()..add(FindProduct(slug: slug)),
             ),
             BlocProvider(create: (_) => sl<ProductCartBloc>()),
           ],
@@ -209,9 +196,9 @@ final router = GoRouter(
       builder: (_, __) => const DeleteAccountPage(),
     ),
     GoRoute(
-      path: OrderSuccess.path,
-      name: OrderSuccess.name,
-      builder: (_, __) => const OrderSuccess(),
+      path: OrderSuccessPage.path,
+      name: OrderSuccessPage.name,
+      builder: (_, __) => const OrderSuccessPage(),
     ),
     GoRoute(
       path: FilterPage.path,
@@ -227,7 +214,7 @@ final router = GoRouter(
       path: OrdersPage.path,
       name: OrdersPage.name,
       builder: (_, __) => BlocProvider(
-        create: (context) => sl<FindAllBloc>()
+        create: (_) => sl<FindAllBloc>()
           ..add(
             const FindAll(
               guid: '1',

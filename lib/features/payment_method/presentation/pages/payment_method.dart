@@ -1,7 +1,7 @@
 import 'package:vashoz/features/payment_method/data/models/method.dart';
 
 import '../../../../core/shared/shared.dart';
-import '../../../checkout/presentation/order_success.dart';
+import '../../../orders/presentation/pages/success.dart';
 import '../../../shipping_method/presentation/widgets/stepper.dart';
 import '../widgets/add_card_form.dart';
 import '../widgets/card.dart';
@@ -211,7 +211,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               CustomButton(
                 text: "Make Payment",
                 onTap: () {
-                  context.pushNamed(OrderSuccess.name);
+                  context.pushNamed(OrderSuccessPage.name);
                 },
               )
             ],

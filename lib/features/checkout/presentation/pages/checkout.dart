@@ -3,7 +3,7 @@ import 'package:vashoz/core/shared/custom_button.dart';
 import '../../../../core/shared/shared.dart';
 import '../../../cart/presentation/widgets/items.dart';
 import '../../../cart/presentation/widgets/pricing.dart';
-import '../order_success.dart';
+import '../../../orders/presentation/pages/success.dart';
 
 class CheckoutPage extends StatelessWidget {
   static const String path = '/checkout';
@@ -141,7 +141,7 @@ class CheckoutPage extends StatelessWidget {
               CustomButton(
                 text: "Place Order",
                 onTap: () {
-                  context.pushNamed(OrderSuccess.name);
+                  context.pushNamed(OrderSuccessPage.name);
                 },
               ),
             ],

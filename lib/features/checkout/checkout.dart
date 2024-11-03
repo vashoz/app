@@ -1,7 +1,6 @@
 export 'data/repositories/checkout_impl.dart';
 export 'data/datasources/remote.dart';
 export 'data/datasources/remote_impl.dart';
-
 export 'data/models/checkout.dart';
 
 export 'domain/entities/checkout.dart';

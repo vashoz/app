@@ -1,12 +1,11 @@
-import 'package:vashoz/features/dashboard/dashboard.dart';
+import '../../../../../core/shared/shared.dart';
+import '../../../cart/cart.dart';
+import '../../../dashboard/dashboard.dart';
 
-import '../../../../core/shared/shared.dart';
-import '../../cart/cart.dart';
-
-class OrderSuccess extends StatelessWidget {
+class OrderSuccessPage extends StatelessWidget {
   static const path = "/order-success";
   static const name = "Order-success";
-  const OrderSuccess({super.key});
+  const OrderSuccessPage({super.key});
 
   @override
   Widget build(BuildContext context) {
