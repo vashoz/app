@@ -17,5 +17,6 @@ export 'domain/usecases/refresh.dart';
 export 'domain/usecases/search.dart';
 export 'domain/usecases/update.dart';
 
+export 'presentation/bloc/favorite_bloc.dart';
 export 'presentation/pages/favorite.dart';
 export 'presentation/widgets/favorite_button.dart';

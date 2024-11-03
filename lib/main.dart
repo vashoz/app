@@ -1,10 +1,8 @@
-import 'package:vashoz/features/cart/presentation/bloc/cart_bloc.dart';
-
 import 'core/config/config.dart';
 import 'core/shared/shared.dart';
-import 'features/favorite/presentation/bloc/favorite_bloc.dart';
+import 'features/cart/cart.dart';
+import 'features/favorite/favorite.dart';
 
-//streak update 2
 void main() async {
   await AppConfig.init();
 
@@ -39,8 +37,7 @@ class MainApp extends StatelessWidget {
             routerConfig: router,
             debugShowCheckedModeBanner: false,
             theme: AppConfig.themeData(context: context, mode: ThemeMode.light),
-            darkTheme:
-                AppConfig.themeData(context: context, mode: ThemeMode.dark),
+            darkTheme: AppConfig.themeData(context: context, mode: ThemeMode.dark),
           );
         },
       ),
