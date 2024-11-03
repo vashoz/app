@@ -1,11 +1,9 @@
 flutter_native_splash:
-  color: "#FFFFFF"
-  image: assets/images/logo.png
-  color_dark: "#F6F5F2"
-  image_dark: assets/images/logo.png
-  ios: true
+  color: "#D9D978"
+  color_dark: "#BDC15B"
+  image: images/logo/vashoz.png
+  ios: false
   android_12:
-    color: "#FFFFFF"
-    image: assets/images/android12splash.png
-    image_dark: assets/images/android12splash.png
-    color_dark: "#F6F5F2"
+    color: "#D9D978"
+    color_dark: "#BDC15B"
+    image: images/logo/android12splash.png
