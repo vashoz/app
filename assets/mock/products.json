@@ -1,0 +1,123 @@
+{
+    "result": [
+    {
+      "product_id": "101",
+      "product_name": "Fresh Peach",
+      "category_id": 1,
+      "quantity":1,
+      "product_images": [
+        {
+          "image_url": "https://i.imgur.com/ETpbdlc.png",
+          "alt_text": "Peach image"
+        },
+        {
+          "image_url": "https://i.imgur.com/ETpbdlc.png",
+          "alt_text": "Peach sliced image"
+        }
+      ],
+      "isFavorite": false,
+      "isNew": false,
+      "product_price": 8.00,
+      "stock_in": 30
+    },
+    {
+      "product_id": "102",
+      "product_name": "Avocado",
+      "category_id": 1,
+      "quantity":1,
+      "product_images": [
+        {
+          "image_url": "https://imgur.com/2EZhyHd.png",
+          "alt_text": "Avocado image"
+        },
+        {
+          "image_url": "https://imgur.com/2EZhyHd.png",
+          "alt_text": "Avocado sliced image"
+        }
+      ],
+      "isFavorite": true,
+      "isNew": true,
+      "product_price": 7.00,
+      "stock_in": 20
+    },
+    {
+      "product_id": "103",
+      "product_name": "Pineapple",
+      "category_id": 1,
+      "quantity":1,
+      "product_images": [
+        {
+          "image_url": "https://i.imgur.com/BXXQBLQ.png",
+          "alt_text": "Pineapple image"
+        },
+        {
+          "image_url": "https://i.imgur.com/BXXQBLQ.png",
+          "alt_text": "Pineapple sliced image"
+        }
+      ],
+      "isFavorite": false,
+      "isNew": false,
+      "product_price": 9.90,
+      "stock_in": 15
+    },
+    {
+      "product_id": "104",
+      "product_name": "Black Grapes",
+      "category_id": 1,
+      "quantity":1,
+      "product_images": [
+        {
+          "image_url": "https://i.imgur.com/WxW7ACg.png",
+          "alt_text": "Black Grapes image"
+        },
+        {
+          "image_url": "https://i.imgur.com/WxW7ACg.png",
+          "alt_text": "Black Grapes bunch"
+        }
+      ],
+      "isFavorite": true,
+      "isNew": false,
+      "product_price": 7.05,
+      "stock_in": 10
+    },
+    {
+      "product_id": "105",
+      "product_name": "Pomegranate",
+      "category_id": 1,
+      "quantity":1,
+      "product_images": [
+        {
+          "image_url": "https://imgur.com/2EZhyHd.png",
+          "alt_text": "Pomegranate image"
+        },
+        {
+          "image_url": "https://imgur.com/2EZhyHd.png",
+          "alt_text": "Pomegranate seeds"
+        }
+      ],
+      "isFavorite": false,
+      "isNew": true,
+      "product_price": 2.09,
+      "stock_in": 25
+    },
+    {
+      "product_id": "106",
+      "product_name": "Fresh Broccoli",
+      "category_id": 1,
+      "quantity":1,
+      "product_images": [
+        {
+          "image_url": "https://i.imgur.com/kshXewy.png",
+          "alt_text": "Broccoli image"
+        }
+      ],
+      "isFavorite": true,
+      "isNew": false,
+      "product_price": 3.00,
+      "stock_in": 18
+    }
+  ],
+  "success": true,
+  "error": ""
+}
+  

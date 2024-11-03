@@ -1,0 +1,24 @@
+{
+  "result": [
+    {
+      "banner_id": "1",
+      "banner_image": "https://www.shutterstock.com/image-vector/colorful-discount-sale-podium-special-600nw-2055955985.jpg",
+      "banner_title": "Cashback Offer",
+      "banner_description": "Summer hot offer"
+    },
+    {
+      "banner_id": "2",
+      "banner_image": "https://www.shutterstock.com/image-vector/flash-sale-promotion-banner-25-600nw-2159885029.jpg",
+      "banner_title": "Cashback Offer",
+      "banner_description": "Summer hot offer"
+    },
+    {
+      "banner_id": "1",
+      "banner_image": "https://cdn1.vectorstock.com/i/1000x1000/96/50/super-sale-offer-and-discount-banner-template-vector-14299650.jpg",
+      "banner_title": "Cashback Offer",
+      "banner_description": "Summer hot offer"
+    }
+  ],
+  "success": true,
+  "error": ""
+}

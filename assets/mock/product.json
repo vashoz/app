@@ -1,0 +1,44 @@
+{
+    "name": "Vashoz Amloki Achar",
+    "guid": "123e4567-e89b-12d3-a456-426614174000",
+    "url": "/product-category/achar/",
+    "photos": [
+      "https://i.imgur.com/ETpbdlc.png",
+      "https://imgur.com/2EZhyHd.png",
+      "https://i.imgur.com/BXXQBLQ.png",
+      "https://i.imgur.com/WxW7ACg.png"
+    ],
+    "categories": [
+      "https://vashoz.com/product-category/achar/",
+      "https://vashoz.com/product-category/achar/"
+    ],
+    "variants": [
+      {
+        "guid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "price": 255,
+        "size": 250,
+        "unit": "gram",
+        "type": "Weight"
+      },
+      {
+        "guid": "9b0819e2-3c1a-49d5-8c3f-23456789ab01",
+        "price": 300,
+        "size": 500,
+        "unit": "gram",
+        "type": "Weight"
+      }
+    ],
+    "bundles": 3,
+    "sku": "N/A",
+    "description": "Lorem ipsum dolor imet",
+    "discount": {
+      "amount": 0,
+      "type": "amount",
+      "expires": "2024-10-08T04:31:24.952Z"
+    },
+    "related": [
+      "/product-category/achar/",
+      "/product-category/achar/",
+      "/product-category/achar/"
+    ]
+  }

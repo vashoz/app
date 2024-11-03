@@ -1,0 +1,63 @@
+[
+  {
+    "order_id": "90897",
+    "order_date": "2021-10-19",
+    "items_count": 10,
+    "total_price": 16.9,
+    "status": [
+      {
+        "stage": "Order placed",
+        "date": "19 oct,2024",
+        "completed": true
+      },
+      {
+        "stage": "Order confirmed",
+        "date": "20 oct,2024",
+        "completed": true
+      },
+      {
+        "stage": "Order shipped",
+        "date": "20 oct,2024",
+        "completed": true
+      },
+      {
+        "stage": "Out for delivery",
+        "date": "pending",
+        "completed": false
+      },
+      {
+        "stage": "Order delivered",
+        "date": "pending",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "order_id": "22034",
+    "order_date": "2021-08-29",
+    "items_count": 2,
+    "total_price": 233.0,
+    "status": [
+      {
+        "stage": "Order placed",
+        "date": "29 oct,2024",
+        "completed": true
+      },
+      {
+        "stage": "Order confirmed",
+        "date": "29 oct,2024",
+        "completed": true
+      },
+      {
+        "stage": "Order shipped",
+        "date": "29 oct,2024",
+        "completed": true
+      },
+      {
+        "stage": "Out for delivery",
+        "date": "29 oct,2024",
+        "completed": false
+      }
+    ]
+  }
+]
