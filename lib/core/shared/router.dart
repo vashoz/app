@@ -1,3 +1,4 @@
+import '../../features/track_order/track_order.dart';
 import 'shared.dart';
 import '../config/config.dart';
 import '../../features/auth/auth.dart';
@@ -100,10 +101,12 @@ final router = GoRouter(
       builder: (_, __) => MultiBlocProvider(
         providers: [
           BlocProvider(create: (_) => sl<FindBannersBloc>()..add(const FindBanners())),
+          BlocProvider(create: (_) => sl<FindAllCategoriesBloc>()..add(const FindAllCategories())),
           BlocProvider(create: (_) => sl<NewArrivalProductsBloc>()..add(NewArrivalProducts())),
           BlocProvider(create: (_) => sl<PopularProductsBloc>()..add(const FetchPopularProducts())),
           BlocProvider(create: (_) => sl<FindFeaturedCategoriesBloc>()..add(const FindFeaturedCategories())),
           BlocProvider(create: (_) => sl<FetchInformationBloc>()..add(const FetchInformation())),
+          BlocProvider(create: (_) => sl<TrackOrderBloc>()),
           BlocProvider(create: (_) => sl<FindAllBloc>()..add(const FindAll(guid: '1'))),
         ],
         child: const DashboardPage(),
