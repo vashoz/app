@@ -10,7 +10,7 @@ class BannersWidget extends StatelessWidget {
       width: context.width,
       height: context.height * .2,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(Dimension.radius.twelve),
+        borderRadius: BorderRadius.circular(Dimension.radius.sixteen),
       ),
       margin: const EdgeInsets.all(0).copyWith(bottom: Dimension.padding.vertical.ultraMax),
       clipBehavior: Clip.antiAlias,
@@ -24,9 +24,8 @@ class BannersWidget extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(Dimension.radius.sixteen),
               ),
-              padding: const EdgeInsets.all(0).copyWith(
-                right: Dimension.padding.horizontal.max,
-              ),
+              shrinkExtent: context.width * .75,
+              padding: EdgeInsets.symmetric(horizontal: Dimension.padding.horizontal.small),
               onTap: (index) {},
               children: state.banners
                   .map(
