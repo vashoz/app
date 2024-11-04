@@ -10,7 +10,7 @@ import '../../features/dashboard/dashboard.dart';
 import '../../features/delivery_address/delivery_address.dart';
 import '../../features/filter/filter.dart';
 import '../../features/forgot_password/forgot_password.dart';
-import '../../features/on_board/on_board.dart';
+import '../../features/onboard/onboard.dart';
 import '../../features/orders/orders.dart';
 import '../../features/payment_method/payment_method.dart';
 import '../../features/product_details/product_details.dart';
@@ -27,6 +27,7 @@ final router = GoRouter(
       path: OnboardingPage.path,
       name: OnboardingPage.name,
       builder: (_, __) => const OnboardingPage(),
+      redirect: (context, state) => context.onboard.onBoarded ? DashboardPage.path : null,
     ),
     GoRoute(
       path: AuthWelcomePage.path,

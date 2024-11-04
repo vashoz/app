@@ -29,7 +29,7 @@ import '../../features/profile/profile.dart';
 import '../../features/dashboard/dashboard.dart';
 import '../../features/forgot_password/forgot_password.dart';
 import '../../features/auth/auth.dart';
-import '../../features/on_board/on_board.dart';
+import '../../features/onboard/onboard.dart';
 
 part 'dependencies.dart';
 part 'network_certificates.dart';
@@ -147,25 +147,28 @@ class AppConfig {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: theme.primaryDark,
+          backgroundColor: theme.primary,
           splashFactory: NoSplash.splashFactory,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Dimension.radius.sixteen),
-            side: BorderSide(
-              color: theme.primary.withAlpha(150),
-              width: 4,
-              strokeAlign: BorderSide.strokeAlignOutside,
-            ),
+            borderRadius: BorderRadius.circular(Dimension.radius.twelve),
+            side: BorderSide.none,
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimension.padding.horizontal.ultraMax,
+            vertical: Dimension.padding.vertical.medium,
+          ),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           elevation: 3,
-          backgroundColor: Colors.white,
-          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          splashFactory: NoSplash.splashFactory,
+          surfaceTintColor: theme.backgroundSecondary,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimension.radius.twelve)),
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimension.padding.horizontal.ultraMax,
+            vertical: Dimension.padding.vertical.medium,
+          ),
         ),
       ),
       textSelectionTheme: TextSelectionThemeData(cursorColor: theme.backgroundPrimary),
@@ -174,17 +177,15 @@ class AppConfig {
       dividerTheme: DividerThemeData(color: theme.backgroundTertiary, thickness: .25),
       appBarTheme: AppBarTheme(
         iconTheme: IconThemeData(color: theme.textPrimary),
-        titleSpacing: 0,
         actionsIconTheme: IconThemeData(color: theme.textPrimary),
-        backgroundColor: theme.backgroundSecondary,
-        surfaceTintColor: theme.backgroundSecondary,
-        foregroundColor: theme.backgroundPrimary,
+        backgroundColor: theme.backgroundPrimary,
+        surfaceTintColor: theme.backgroundPrimary,
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
-          statusBarIconBrightness: Brightness.dark,
-          systemNavigationBarColor: theme.positive,
-          systemNavigationBarDividerColor: Colors.transparent,
-          systemNavigationBarIconBrightness: Brightness.light,
+          statusBarIconBrightness: mode == ThemeMode.dark ? Brightness.light : Brightness.dark,
+          systemNavigationBarColor: theme.backgroundPrimary,
+          systemNavigationBarDividerColor: theme.textPrimary,
+          systemNavigationBarIconBrightness: mode == ThemeMode.dark ? Brightness.light : Brightness.dark,
         ),
         elevation: 0,
       ),

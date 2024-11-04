@@ -1,3 +1,4 @@
+import '../../../features/onboard/onboard.dart';
 import '../shared.dart';
 
 extension BuildContextExtension on BuildContext {
@@ -15,7 +16,13 @@ extension BuildContextExtension on BuildContext {
 
   double get height => MediaQuery.sizeOf(this).height;
 
+
   ThemeBloc get themeBloc => this.read<ThemeBloc>();
+  OnboardBloc get onboard => this.read<OnboardBloc>();
+
+  Color get barrierColor {
+    return themeBloc.state.scheme.textPrimary.withOpacity(themeBloc.state.mode == ThemeMode.dark ? .1 : .5);
+  }
 
   ThemeScheme get theme => themeBloc.state.scheme;
 

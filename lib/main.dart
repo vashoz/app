@@ -1,5 +1,6 @@
 import 'core/config/config.dart';
 import 'core/shared/shared.dart';
+import 'features/onboard/onboard.dart';
 import 'features/cart/cart.dart';
 import 'features/favorite/favorite.dart';
 
@@ -10,6 +11,7 @@ void main() async {
     MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => sl<ThemeBloc>()),
+        BlocProvider(create: (_) => sl<OnboardBloc>()),
         BlocProvider(create: (_) => sl<CartBloc>()),
         BlocProvider(create: (_) => sl<FavoriteBloc>()),
       ],

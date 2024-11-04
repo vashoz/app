@@ -8,6 +8,7 @@ export 'error/failure/failure.dart';
 export 'extension/context.dart';
 export 'extension/date_time.dart';
 export 'extension/int.dart';
+export 'extension/onboard.dart';
 export 'extension/theme.dart';
 export 'remote/endpoints.dart';
 export 'remote/response.dart';

@@ -15,7 +15,7 @@ class ThemeScheme {
   final Color iconColor;
   final Color borderColor;
   final Color primaryDark;
-  final Color primary;
+  final Color primary = const Color(0xFF6CC51D);
   final Color primaryLight;
   final Color negative;
   final Color warning;
@@ -34,7 +34,6 @@ class ThemeScheme {
     required this.textLight,
     required this.white,
     required this.black,
-    required this.primary,
     required this.positive,
     required this.primaryLight,
     required this.primaryDark,
@@ -54,14 +53,13 @@ class ThemeScheme {
       backgroundPrimary: const Color(0xFFFFFFFF),
       backgroundSecondary: const Color(0xFFF4F5F9),
       backgroundTertiary: const Color(0xFFF5F5F5),
-      textPrimary: const Color(0xFF000000),
+      textPrimary: const Color(0xFF1c1c1c),
       textLight: const Color(0xFF868889),
       textTertiary: const Color(0xFF868889),
-      textSecondary: const Color(0xFFFFFFFF),
+      textSecondary: const Color(0xFF66666e),
       iconColor: const Color(0xFFFFFFFF),
       white: const Color(0xFFFFFFFF),
       black: const Color(0xFF000000),
-      primary: const Color(0xFFAEDC81),
       positive: const Color(0xFF058c42),
       primaryDark: const Color(0xFF6CC51D),
       primaryLight: const Color(0xFFEBFFD7),
@@ -95,7 +93,6 @@ class ThemeScheme {
       black: const Color(0xFF000000),
       primaryLight: const Color(0xFFEBFFD7),
       textLight: const Color(0xFF6c757d),
-      primary: const Color(0xFFff4800),
       iconColor: const Color(0xFFFFFFFF),
       positive: const Color(0xFF058c42),
       primaryDark: const Color(0xFF2f3e46),
