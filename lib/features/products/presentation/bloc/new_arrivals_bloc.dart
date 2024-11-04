@@ -9,7 +9,7 @@ class NewArrivalProductsBloc
   final NewArrivalProductsUseCase useCase;
   NewArrivalProductsBloc({required this.useCase})
       : super(NewArrivalProductsInitial()) {
-    on<NewArrivalProducts>((event, emit) async {
+    on<FetchNewArrivalProducts>((event, emit) async {
       emit(const NewArrivalProductsLoading());
       final result = await useCase();
       result.fold(

@@ -1,10 +1,8 @@
 import '../../../../core/shared/shared.dart';
+import '../../dashboard.dart';
 import '../../../banner/banner.dart';
-import '../../../business_information/presentation/widgets/business_information_widget.dart';
-import '../../../category/presentation/widgets/featured.dart';
-import 'header.dart';
-import 'popular.dart';
-import 'new_arrival.dart';
+import '../../../business/business.dart';
+import '../../../category/category.dart';
 
 class DashboardFragment extends StatefulWidget {
   const DashboardFragment({super.key});

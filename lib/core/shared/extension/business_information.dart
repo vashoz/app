@@ -1,4 +1,4 @@
-import '../../../features/business_information/business_information.dart';
+import '../../../features/business/business.dart';
 
 extension BusinessInformationEntityExtension on BusinessInformationEntity {
   // TODO: Add extension methods

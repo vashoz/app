@@ -4,7 +4,7 @@ import '../shared/shared.dart';
 import '../../features/cart/cart.dart';
 import '../../features/reviews/reviews.dart';
 import '../../features/track_order/track_order.dart';
-import '../../features/business_information/business_information.dart';
+import '../../features/business/business.dart';
 import '../../features/filter/filter.dart';
 import '../../features/search/search.dart';
 import '../../features/variant/variant.dart';

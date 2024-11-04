@@ -1,5 +1,5 @@
 import '../../../../core/shared/shared.dart';
-import '../../business_information.dart';
+import '../../business.dart';
 
 class BusinessInformationRemoteDataSourceImpl
     extends BusinessInformationRemoteDataSource {

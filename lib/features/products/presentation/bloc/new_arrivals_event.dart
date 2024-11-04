@@ -7,4 +7,4 @@ sealed class NewArrivalProductsEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class NewArrivalProducts extends NewArrivalProductsEvent {}
+class FetchNewArrivalProducts extends NewArrivalProductsEvent {}

@@ -9,3 +9,4 @@ export 'domain/usecases/read.dart';
 
 export 'presentation/bloc/fetch_information_bloc.dart';
 export 'presentation/pages/business_information.dart';
+export 'presentation/widgets/business_information_widget.dart';

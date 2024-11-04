@@ -3,7 +3,7 @@ import 'shared.dart';
 import '../config/config.dart';
 import '../../features/auth/auth.dart';
 import '../../features/banner/banner.dart';
-import '../../features/business_information/business_information.dart';
+import '../../features/business/business.dart';
 import '../../features/cart/cart.dart';
 import '../../features/category/category.dart';
 import '../../features/checkout/checkout.dart';
@@ -48,7 +48,7 @@ final router = GoRouter(
         final String slug = arguments?['slug'] as String;
         return MultiBlocProvider(
           providers: [
-            BlocProvider(create: (_) => sl<NewArrivalProductsBloc>()..add(NewArrivalProducts())),
+            BlocProvider(create: (_) => sl<NewArrivalProductsBloc>()..add(FetchNewArrivalProducts())),
             BlocProvider(create: (_) => sl<FindProductBloc>()..add(FindProduct(slug: slug))),
             BlocProvider(create: (_) => sl<ProductCartBloc>()),
           ],
@@ -102,7 +102,7 @@ final router = GoRouter(
         providers: [
           BlocProvider(create: (_) => sl<FindBannersBloc>()..add(const FindBanners())),
           BlocProvider(create: (_) => sl<FindAllCategoriesBloc>()..add(const FindAllCategories())),
-          BlocProvider(create: (_) => sl<NewArrivalProductsBloc>()..add(NewArrivalProducts())),
+          BlocProvider(create: (_) => sl<NewArrivalProductsBloc>()..add(FetchNewArrivalProducts())),
           BlocProvider(create: (_) => sl<PopularProductsBloc>()..add(const FetchPopularProducts())),
           BlocProvider(create: (_) => sl<FindFeaturedCategoriesBloc>()..add(const FindFeaturedCategories())),
           BlocProvider(create: (_) => sl<FetchInformationBloc>()..add(const FetchInformation())),

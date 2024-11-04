@@ -1,6 +1,6 @@
 import 'package:vashoz/core/shared/shared.dart';
 
-import '../../business_information.dart';
+import '../../business.dart';
 
 part 'fetch_information_event.dart';
 part 'fetch_information_state.dart';
