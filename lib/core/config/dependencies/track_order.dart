@@ -2,7 +2,6 @@ part of '../config.dart';
 
 Future<void> get trackOrderDependencies async {
   //! ----------------- Bloc -----------------
-
   sl.registerFactory(
     () => TrackOrderBloc(
       usecase: sl(),
@@ -10,7 +9,6 @@ Future<void> get trackOrderDependencies async {
   );
 
   //! ----------------- UseCase -----------------
-
   sl.registerLazySingleton<ReadTrackOrderUseCase>(
     () => ReadTrackOrderUseCase(
       repository: sl(),
@@ -32,7 +30,6 @@ Future<void> get trackOrderDependencies async {
       client: sl(),
     ),
   );
-
   sl.registerLazySingleton<TrackOrderLocalDataSource>(
     () => TrackOrderLocalDataSourceImpl(),
   );

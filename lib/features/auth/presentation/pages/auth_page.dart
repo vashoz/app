@@ -1,6 +1,6 @@
-import 'package:vashoz/core/shared/shared.dart';
-import 'package:vashoz/features/auth/presentation/widgets/remember_me.dart';
-import 'package:vashoz/features/dashboard/dashboard.dart';
+import '../../../../core/shared/shared.dart';
+import '../../auth.dart';
+import '../../../dashboard/dashboard.dart';
 
 class AuthPage extends StatefulWidget {
   static const name = 'Auth-page';

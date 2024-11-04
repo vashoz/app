@@ -17,3 +17,4 @@ export 'domain/usecases/update.dart';
 
 export 'presentation/pages/delete_account_page.dart';
 export 'presentation/pages/web_view_page.dart';
+export 'presentation/widgets/profile_fragment.dart';

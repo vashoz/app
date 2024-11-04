@@ -8,5 +8,5 @@ export 'domain/usecases/refresh.dart';
 export 'domain/usecases/search.dart';
 export 'domain/usecases/update.dart';
 
-export 'presentation/pages/cart_page.dart';
 export 'presentation/bloc/cart_bloc.dart';
+export 'presentation/pages/cart_page.dart';

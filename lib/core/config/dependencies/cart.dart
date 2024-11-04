@@ -1,6 +1,4 @@
-import '../../../features/cart/cart.dart';
-import '../../../features/products/presentation/bloc/product_cart_bloc.dart';
-import '../config.dart';
+part of '../config.dart';
 
 Future<void> get cartDependencies async {
   //! ----------------- Bloc -----------------

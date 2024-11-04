@@ -2,14 +2,13 @@ part of '../config.dart';
 
 Future<void> get discountDependencies async {
   //! ----------------- Bloc -----------------
-
   sl.registerFactory(
     () => FetchDiscountBloc(
       readDiscountUseCase: sl(),
     ),
   );
-  //! ----------------- UseCase -----------------
 
+  //! ----------------- UseCase -----------------
   sl.registerLazySingleton<ReadDiscountUseCase>(
     () => ReadDiscountUseCase(
       repository: sl(),

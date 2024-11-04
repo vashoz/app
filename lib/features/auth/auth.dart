@@ -17,3 +17,4 @@ export 'domain/usecases/update.dart';
 
 export 'presentation/pages/auth_page.dart';
 export 'presentation/pages/auth_welcome_page.dart';
+export 'presentation/widgets/remember_me.dart';

@@ -1,6 +1,7 @@
-import 'package:vashoz/core/shared/shared.dart';
 
-import 'auth_page.dart';
+
+import '../../../../core/shared/shared.dart';
+import '../../auth.dart';
 
 class AuthWelcomePage extends StatelessWidget {
   static const name = 'Authn-welcome-page';

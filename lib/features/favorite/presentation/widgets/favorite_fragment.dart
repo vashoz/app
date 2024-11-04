@@ -1,10 +1,10 @@
 import 'package:vashoz/features/products/products.dart';
 
-import '../../../../core/shared/shared.dart';
-import '../../../core/config/config.dart';
-import '../../product_details/product_details.dart';
-import '../../products/presentation/bloc/product_cart_bloc.dart';
-import 'bloc/favorite_bloc.dart';
+import '../../../../../core/shared/shared.dart';
+import '../../../../core/config/config.dart';
+import '../../../product_details/product_details.dart';
+import '../../../products/presentation/bloc/product_cart_bloc.dart';
+import '../bloc/favorite_bloc.dart';
 
 class FavoriteFragment extends StatelessWidget {
   final VoidCallback onPop;

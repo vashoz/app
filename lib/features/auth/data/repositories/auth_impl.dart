@@ -4,7 +4,6 @@ import '../../auth.dart';
 class AuthRepositoryImpl extends AuthRepository {
   final NetworkInfo network;
   final AuthLocalDataSource local;
-
   final AuthRemoteDataSource remote;
 
   AuthRepositoryImpl({

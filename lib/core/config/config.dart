@@ -1,13 +1,7 @@
-import 'package:vashoz/core/config/dependencies/cart.dart';
-import 'package:vashoz/features/business_information/presentation/bloc/fetch_information_bloc.dart';
-import 'package:vashoz/features/discount/presentation/bloc/fetch_discount_bloc.dart';
-import 'package:vashoz/features/orders/presentation/bloc/find_all_bloc.dart';
-import 'package:vashoz/features/products/presentation/bloc/find_products_bloc.dart';
-
-import '../../features/favorite/presentation/bloc/favorite_bloc.dart';
-import '../../features/track_order/presentation/bloc/track_order_bloc.dart';
 import '../shared/shared.dart';
+
 //! mason:linking-imports - DO NOT REMOVE THIS COMMENT --------------------------->
+import '../../features/cart/cart.dart';
 import '../../features/reviews/reviews.dart';
 import '../../features/track_order/track_order.dart';
 import '../../features/business_information/business_information.dart';
@@ -34,6 +28,7 @@ import '../../features/onboard/onboard.dart';
 part 'dependencies.dart';
 part 'network_certificates.dart';
 //! mason:linking-dependencies - DO NOT REMOVE THIS COMMENT ---------------------->
+part 'dependencies/cart.dart';
 part 'dependencies/reviews.dart';
 part 'dependencies/track_order.dart';
 part 'dependencies/business_information.dart';
@@ -60,7 +55,6 @@ part 'dependencies/on_board.dart';
 class AppConfig {
   static FutureOr<void> init() async {
     WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
     // Bypass the SSL certificate verification
@@ -91,8 +85,10 @@ class AppConfig {
         filled: true,
         fillColor: theme.backgroundSecondary,
         labelStyle: TextStyles.body(context: context, color: theme.textPrimary),
-        contentPadding:
-            EdgeInsets.symmetric(horizontal: Dimension.padding.horizontal.max, vertical: Dimension.padding.vertical.max),
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: Dimension.padding.horizontal.max,
+          vertical: Dimension.padding.vertical.max,
+        ),
         hintStyle: TextStyles.body(context: context, color: theme.textLight),
         errorStyle: const TextStyle(height: 0),
         helperStyle: const TextStyle(height: 0),

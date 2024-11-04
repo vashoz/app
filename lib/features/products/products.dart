@@ -21,3 +21,4 @@ export 'presentation/pages/popular.dart';
 export 'presentation/pages/new_arrivals.dart';
 export 'presentation/pages/products_by_category.dart';
 export 'presentation/widgets/items.dart';
+export 'presentation/widgets/products_fragment.dart';

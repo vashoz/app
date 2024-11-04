@@ -1,17 +1,15 @@
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:vashoz/features/category/category.dart';
 
 import '../../../../core/config/config.dart';
 import '../../../../core/shared/shared.dart';
-import '../../../favorite/presentation/favorite_fragment.dart';
-import '../../../products/presentation/widgets/products_fragment.dart';
-import '../../../profile/presentation/widgets/profile_fragment.dart';
-import '../../../track_order/presentation/bloc/track_order_bloc.dart';
-import '../../../track_order/presentation/widgets/track_order_fragment.dart';
-import '../widgets/dashboard_fragment.dart';
+import '../../dashboard.dart';
+import '../../../category/category.dart';
+import '../../../favorite/favorite.dart';
+import '../../../products/products.dart';
+import '../../../profile/profile.dart';
+import '../../../track_order/track_order.dart';
 
 class DashboardPage extends StatefulWidget {
-  static const String path = '/dashboard';
+  static const String path = '/';
   static const String name = 'DashboardPage';
   const DashboardPage({super.key});
 
