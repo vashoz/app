@@ -52,3 +52,4 @@ export 'package:internet_connection_checker/internet_connection_checker.dart';
 export 'package:path_provider/path_provider.dart';
 export 'package:flutter/cupertino.dart' hide RefreshCallback;
 export 'package:shared_preferences/shared_preferences.dart';
+export 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';

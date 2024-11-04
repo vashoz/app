@@ -10,3 +10,4 @@ export 'domain/usecases/update.dart';
 
 export 'presentation/bloc/cart_bloc.dart';
 export 'presentation/pages/cart_page.dart';
+export 'presentation/widgets/button.dart';

@@ -16,7 +16,7 @@ export 'domain/usecases/search.dart';
 export 'domain/usecases/update.dart';
 
 export 'presentation/pages/dashboard.dart';
-export 'presentation/widgets/dashboard_fragment.dart';
-export 'presentation/widgets/header.dart';
+export 'presentation/widgets/dashboard.dart';
+export 'presentation/widgets/search.dart';
 export 'presentation/widgets/popular.dart';
 export 'presentation/widgets/new_arrival.dart';

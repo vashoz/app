@@ -8,27 +8,25 @@ class BannersWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: context.width,
-      height: context.height * .20,
-      margin: EdgeInsets.symmetric(
-        horizontal: Dimension.padding.horizontal.max,
-        vertical: Dimension.padding.vertical.max,
-      ),
+      height: context.height * .2,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(Dimension.radius.twelve),
       ),
+      margin: const EdgeInsets.all(0).copyWith(bottom: Dimension.padding.vertical.ultraMax),
       clipBehavior: Clip.antiAlias,
       child: BlocBuilder<FindBannersBloc, FindBannersState>(
         builder: (context, state) {
           if (state is FindBannersDone) {
             return CarouselView(
-              itemExtent: context.width * .8,
+              itemExtent: context.width * .75,
               itemSnapping: true,
               scrollDirection: Axis.horizontal,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(Dimension.radius.twelve),
+                borderRadius: BorderRadius.circular(Dimension.radius.sixteen),
               ),
-              padding: EdgeInsets.symmetric(
-                  horizontal: Dimension.padding.horizontal.small),
+              padding: const EdgeInsets.all(0).copyWith(
+                right: Dimension.padding.horizontal.max,
+              ),
               onTap: (index) {},
               children: state.banners
                   .map(
@@ -36,10 +34,10 @@ class BannersWidget extends StatelessWidget {
                       imageUrl: banner.url,
                       fit: BoxFit.cover,
                       placeholder: (context, url) => ShimmerLabel(
-                          width: context.width * .8,
-                          height: context.height * .15),
-                      errorWidget: (context, url, error) =>
-                          const Icon(Icons.error),
+                        width: context.width * .8,
+                        height: context.height * .15,
+                      ),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                   )
                   .toList(),
@@ -53,8 +51,7 @@ class BannersWidget extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(Dimension.radius.twelve),
               ),
-              padding: EdgeInsets.symmetric(
-                  horizontal: Dimension.padding.horizontal.small),
+              padding: EdgeInsets.symmetric(horizontal: Dimension.padding.horizontal.small),
               onTap: (index) {},
               children: [
                 ShimmerLabel(

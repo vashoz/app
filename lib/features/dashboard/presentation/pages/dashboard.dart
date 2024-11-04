@@ -23,7 +23,7 @@ class _DashboardPageState extends State<DashboardPage> {
   void initState() {
     super.initState();
     fragments = [
-      const DashboardFragment(),
+      const DashboardWidget(),
       const ProductsFragment(),
       FavoriteFragment(onPop: returnBack),
       const TrackOrderFragment(),

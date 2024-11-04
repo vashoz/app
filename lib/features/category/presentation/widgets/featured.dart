@@ -17,17 +17,12 @@ class FeaturedCategoriesWidget extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: Dimension.padding.horizontal.max,
-              ),
-              child: SectionTitle(
-                icon: Icons.category_rounded,
-                title: "Categories",
-                press: () {
-                  context.pushNamed(CategoriesPage.name);
-                },
-              ),
+            SectionTitle(
+              icon: Icons.category_rounded,
+              title: "Categories",
+              press: () {
+                context.pushNamed(CategoriesPage.name);
+              },
             ),
             Container(
               padding: EdgeInsets.symmetric(

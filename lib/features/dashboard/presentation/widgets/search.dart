@@ -1,13 +1,13 @@
 import '../../../../core/shared/shared.dart';
 import '../../../search/search.dart';
 
-class SearchField extends StatelessWidget {
-  const SearchField({super.key});
+class SearchWidget extends StatelessWidget {
+  const SearchWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeBloc, ThemeState>(
-      builder: (context, state) {
+      builder: (_, state) {
         final theme = state.scheme;
         return InkWell(
           onTap: () {
@@ -16,23 +16,21 @@ class SearchField extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(Dimension.padding.vertical.large),
             decoration: BoxDecoration(
-              color: theme.textLight.withOpacity(.1),
-              borderRadius:
-                  BorderRadius.circular(Dimension.size.vertical.eight),
+              color: theme.textSecondary.withAlpha(15),
+              borderRadius: BorderRadius.circular(
+                Dimension.size.vertical.twelve,
+              ),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(
-                  Icons.search,
-                  color: theme.textLight,
-                ),
-                SizedBox(
-                  width: Dimension.size.horizontal.eight,
-                ),
-                Text(
-                  "Search product",
-                  style: context.textStyle10Regular(color: theme.textLight),
+                Icon(Icons.search, color: theme.textSecondary),
+                SizedBox(width: Dimension.size.horizontal.eight),
+                Expanded(
+                  child: Text(
+                    "Search product",
+                    style: context.textStyle10Regular(color: theme.textSecondary),
+                  ),
                 ),
               ],
             ),
