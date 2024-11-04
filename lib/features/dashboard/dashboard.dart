@@ -20,3 +20,4 @@ export 'presentation/widgets/dashboard.dart';
 export 'presentation/widgets/search.dart';
 export 'presentation/widgets/popular.dart';
 export 'presentation/widgets/new_arrival.dart';
+export 'presentation/widgets/section.dart';

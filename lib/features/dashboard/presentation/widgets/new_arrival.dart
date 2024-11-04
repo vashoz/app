@@ -23,10 +23,10 @@ class NewArrivalProducts extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                     horizontal: Dimension.padding.horizontal.max,
                     vertical: Dimension.padding.vertical.max),
-                child: SectionTitle(
+                child: SectionHeaderWidget(
                   icon: Icons.new_releases,
                   title: "New Arrivals",
-                  press: () {
+                  onSeeMore: () {
                     context.pushNamed(
                       NewArrivalProductsPage.name,
                       extra: {

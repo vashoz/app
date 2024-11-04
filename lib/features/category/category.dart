@@ -21,3 +21,4 @@ export 'presentation/bloc/find_all_bloc.dart';
 export 'presentation/bloc/search_bloc.dart';
 export 'presentation/pages/categories.dart';
 export 'presentation/widgets/featured.dart';
+export 'presentation/widgets/shimmer/shimmer.dart';

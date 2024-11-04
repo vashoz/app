@@ -16,10 +16,10 @@ class DashboardWidget extends StatelessWidget {
         final theme = state.scheme;
         return KeyboardDismissOnTap(
           child: Scaffold(
-            backgroundColor: theme.backgroundSecondary,
+            backgroundColor: theme.backgroundPrimary,
             appBar: AppBar(
-              surfaceTintColor: Colors.transparent,
-              backgroundColor: theme.backgroundSecondary,
+              surfaceTintColor: theme.backgroundPrimary,
+              backgroundColor: theme.backgroundPrimary,
               title: const SearchWidget(),
               elevation: 0,
               scrolledUnderElevation: Dimension.radius.four,

@@ -16,7 +16,7 @@ class SearchWidget extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(Dimension.padding.vertical.large),
             decoration: BoxDecoration(
-              color: theme.textSecondary.withAlpha(15),
+              color: theme.backgroundSecondary,
               borderRadius: BorderRadius.circular(
                 Dimension.size.vertical.twelve,
               ),

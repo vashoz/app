@@ -17,7 +17,7 @@ class CartButton extends StatelessWidget {
           },
           icon: CircleAvatar(
             radius: Dimension.radius.twenty,
-            backgroundColor: theme.textSecondary.withAlpha(15),
+            backgroundColor: theme.backgroundSecondary,
             child: SvgPicture.string(
               AssetImages.cartIcon,
               width: Dimension.radius.sixteen,

@@ -1,13 +1,13 @@
 import '../../../../core/shared/shared.dart';
 
-class SectionTitle extends StatelessWidget {
+class SectionHeaderWidget extends StatelessWidget {
   final String title;
   final IconData icon;
-  final VoidCallback press;
-  const SectionTitle({
+  final VoidCallback onSeeMore;
+  const SectionHeaderWidget({
     super.key,
     required this.title,
-    required this.press,
+    required this.onSeeMore,
     required this.icon,
   });
 
@@ -18,25 +18,37 @@ class SectionTitle extends StatelessWidget {
         final theme = state.scheme;
         return Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Icon(
                   icon,
-                  color: theme.positive,
+                  color: theme.textSecondary,
                 ),
                 SizedBox(width: Dimension.padding.horizontal.medium),
                 Text(
                   title,
-                  style: context.textStyle15SemiBold(color: theme.textPrimary),
+                  style: context.textStyle13Regular(color: theme.textSecondary).copyWith(fontWeight: FontWeight.bold),
                 ),
               ],
             ),
             InkWell(
-              onTap: () => press(),
-              child: Text(
-                "See more",
-                style: context.textStyle10Regular(color: theme.positive),
+              onTap: onSeeMore,
+              borderRadius: BorderRadius.circular(Dimension.radius.twelve),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "See more",
+                    style: context.textStyle10Regular(color: theme.link).copyWith(fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(width: Dimension.padding.horizontal.small),
+                  Icon(Icons.arrow_forward_rounded, color: theme.link, size: Dimension.radius.twelve),
+                ],
               ),
             ),
           ],

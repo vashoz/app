@@ -29,10 +29,10 @@ class PopularProducts extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                     horizontal: Dimension.padding.horizontal.max,
                     vertical: Dimension.padding.vertical.max),
-                child: SectionTitle(
+                child: SectionHeaderWidget(
                   icon: Icons.local_offer_rounded,
                   title: "Popular Products",
-                  press: () {
+                  onSeeMore: () {
                     context.pushNamed(
                       PopularProductsPage.name,
                       extra: {'slug': ""},
