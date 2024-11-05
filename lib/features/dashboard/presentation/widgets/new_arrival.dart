@@ -1,9 +1,8 @@
 import '../../../../core/config/config.dart';
 import '../../../../core/shared/shared.dart';
+import '../../dashboard.dart';
 import '../../../product_details/product_details.dart';
-import '../../../product/presentation/bloc/product_cart_bloc.dart';
 import '../../../product/product.dart';
-import 'section.dart';
 
 class NewArrivalProducts extends StatelessWidget {
   const NewArrivalProducts({super.key});
@@ -19,29 +18,28 @@ class NewArrivalProducts extends StatelessWidget {
         } else if (state is NewArrivalProductsDone) {
           return Column(
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: Dimension.padding.horizontal.max,
-                    vertical: Dimension.padding.vertical.max),
-                child: SectionHeaderWidget(
-                  icon: Icons.new_releases,
-                  title: "New Arrivals",
-                  onSeeMore: () {
-                    context.pushNamed(
-                      NewArrivalProductsPage.name,
-                      extra: {
-                        'slug': "",
-                      },
-                    );
-                  },
-                ),
+              SectionHeaderWidget(
+                icon: Icons.new_releases,
+                title: "New Arrivals",
+                onSeeMore: () {
+                  context.pushNamed(
+                    NewArrivalProductsPage.name,
+                    extra: {
+                      'slug': "",
+                    },
+                  );
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+              Container(
+                margin: const EdgeInsets.all(0).copyWith(
+                  top: Dimension.padding.vertical.max,
+                  bottom: Dimension.padding.vertical.ultraMax,
+                ),
                 child: GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: state.products.length,
+                  padding: const EdgeInsets.all(0),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 16,
@@ -51,11 +49,8 @@ class NewArrivalProducts extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return MultiBlocProvider(
                       providers: [
-                        BlocProvider(
-                            create: (context) => sl<FindProductBloc>()
-                              ..add(FindProduct(slug: state.products[index]))),
-                        BlocProvider(
-                            create: (context) => sl<ProductCartBloc>()),
+                        BlocProvider(create: (context) => sl<FindProductBloc>()..add(FindProduct(slug: state.products[index]))),
+                        BlocProvider(create: (context) => sl<ProductCartBloc>()),
                       ],
                       child: ProductWidget(
                         onTap: () {

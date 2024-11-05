@@ -1,8 +1,8 @@
 import '../../../../core/shared/shared.dart';
-import '../bloc/fetch_information_bloc.dart';
+import '../../business.dart';
 
-class BusinessInformationsWidget extends StatelessWidget {
-  const BusinessInformationsWidget({super.key});
+class BusinessFooterWidget extends StatelessWidget {
+  const BusinessFooterWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,12 @@ class BusinessInformationsWidget extends StatelessWidget {
               final information = state.businessInformation;
               return Container(
                 padding: EdgeInsets.symmetric(
-                    horizontal: Dimension.padding.horizontal.max,
-                    vertical: Dimension.padding.vertical.max),
+                  horizontal: Dimension.padding.horizontal.max,
+                  vertical: Dimension.padding.vertical.max,
+                ),
                 decoration: BoxDecoration(
-                  color: theme.positive,
+                  color: theme.backgroundSecondary,
+                  borderRadius: BorderRadius.circular(Dimension.radius.sixteen),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,8 +28,7 @@ class BusinessInformationsWidget extends StatelessWidget {
                   children: [
                     Text(
                       "Follow Us",
-                      style: context.textStyle15SemiBold(
-                          color: theme.backgroundPrimary),
+                      style: context.textStyle15SemiBold(color: theme.textPrimary),
                     ),
                     SizedBox(height: Dimension.padding.vertical.max),
                     Row(
@@ -41,39 +42,33 @@ class BusinessInformationsWidget extends StatelessWidget {
                     SizedBox(height: Dimension.padding.vertical.max),
                     Text(
                       "Address",
-                      style: context.textStyle15SemiBold(
-                          color: theme.backgroundPrimary),
+                      style: context.textStyle15SemiBold(color: theme.textPrimary),
                     ),
                     SizedBox(height: Dimension.padding.vertical.small),
                     Text(
                       information.address,
                       textAlign: TextAlign.center,
-                      style: context.textStyle10Regular(
-                          color: theme.backgroundPrimary),
+                      style: context.textStyle10Regular(color: theme.textPrimary),
                     ),
                     SizedBox(height: Dimension.padding.vertical.max),
                     Text(
                       "Contact",
-                      style: context.textStyle15SemiBold(
-                          color: theme.backgroundPrimary),
+                      style: context.textStyle15SemiBold(color: theme.textPrimary),
                     ),
                     SizedBox(height: Dimension.padding.vertical.small),
                     Text(
                       information.phone,
-                      style: context.textStyle10Regular(
-                          color: theme.backgroundPrimary),
+                      style: context.textStyle10Regular(color: theme.textPrimary),
                     ),
                     SizedBox(height: Dimension.padding.vertical.max),
                     Text(
                       "Email",
-                      style: context.textStyle15SemiBold(
-                          color: theme.backgroundPrimary),
+                      style: context.textStyle15SemiBold(color: theme.textPrimary),
                     ),
                     SizedBox(height: Dimension.padding.vertical.small),
                     Text(
                       information.email,
-                      style: context.textStyle10Regular(
-                          color: theme.backgroundPrimary),
+                      style: context.textStyle10Regular(color: theme.textPrimary),
                     ),
                   ],
                 ),
@@ -81,8 +76,7 @@ class BusinessInformationsWidget extends StatelessWidget {
             } else if (state is FetchInformationError) {
               return Container(
                 padding: EdgeInsets.symmetric(
-                    horizontal: Dimension.padding.horizontal.max,
-                    vertical: Dimension.padding.vertical.max),
+                    horizontal: Dimension.padding.horizontal.max, vertical: Dimension.padding.vertical.max),
                 decoration: BoxDecoration(
                   color: theme.negative,
                 ),

@@ -41,7 +41,7 @@ class DashboardWidget extends StatelessWidget {
                 FeaturedCategoriesWidget(),
                 PopularProducts(),
                 NewArrivalProducts(),
-                BusinessInformationsWidget(),
+                BusinessFooterWidget(),
               ],
             ),
           ),
