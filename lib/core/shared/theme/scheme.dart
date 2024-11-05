@@ -15,7 +15,7 @@ class ThemeScheme {
   final Color iconColor;
   final Color borderColor;
   final Color primaryDark;
-  final Color primary = const Color(0xFF6CC51D);
+  final Color primary = const Color(0xFFD9D978);
   final Color primaryLight;
   final Color negative;
   final Color warning;
@@ -56,7 +56,7 @@ class ThemeScheme {
       textPrimary: const Color(0xFF1c1c1c),
       textLight: const Color(0xFF868889),
       textTertiary: const Color(0xFF868889),
-      textSecondary: const Color(0xFF66666e),
+      textSecondary: const Color(0xFF868889),
       iconColor: const Color(0xFFFFFFFF),
       white: const Color(0xFFFFFFFF),
       black: const Color(0xFF000000),

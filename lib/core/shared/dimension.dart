@@ -56,6 +56,7 @@ class VerticalPadding {
   final double medium = 8.0.h;
   final double small = 4.0.h;
   final double verySmall = 2.0.h;
+  final double min = 1.0.h;
 } //? ------------------- Padding -------------------
 
 //! ################################################
@@ -96,6 +97,7 @@ class VerticalSize {
   final double three = 3.0.h;
   final double four = 4.0.h;
   final double sixtyFour = 64.0.h;
+  final double seven = 7.0.h;
   final double eight = 8.0.h;
   final double ten = 10.0.h;
   final double twelve = 12.0.h;

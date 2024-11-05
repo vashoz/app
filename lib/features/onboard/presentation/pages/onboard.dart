@@ -144,7 +144,7 @@ class OnboardingPageState extends State<OnboardingPage> {
                           },
                           child: Text(
                             (currentPage == onboardingData.length - 1 ? "Finish" : "Next").toUpperCase(),
-                            style: context.textStyle13Regular(color: theme.white).copyWith(
+                            style: context.textStyle13Regular(color: theme.black).copyWith(
                                   height: 1.4,
                                   fontWeight: FontWeight.bold,
                                 ),

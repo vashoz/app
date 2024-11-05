@@ -3,6 +3,7 @@
     "guid": "123e4567-e89b-12d3-a456-426614174000",
     "url": "/product-category/achar/",
     "photos": [
+      "https://vashoz.com/wp-content/uploads/2023/12/Untitled-6-405x330.png",
       "https://i.imgur.com/ETpbdlc.png",
       "https://imgur.com/2EZhyHd.png",
       "https://i.imgur.com/BXXQBLQ.png",
@@ -17,14 +18,14 @@
         "guid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
         "price": 255,
         "size": 250,
-        "unit": "gram",
+        "unit": "g",
         "type": "Weight"
       },
       {
         "guid": "9b0819e2-3c1a-49d5-8c3f-23456789ab01",
         "price": 300,
         "size": 500,
-        "unit": "gram",
+        "unit": "g",
         "type": "Weight"
       }
     ],

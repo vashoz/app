@@ -11,7 +11,7 @@ class ProductEntity extends Equatable {
   final List<String> categories;
   final List<VariantEntity> variants;
   final String description;
-  final DiscountEntity discount;
+  final DiscountEntity? discount;
   final int bundles;
   final List<String> relatedProducts;
 

@@ -9,7 +9,7 @@ class FavoriteState extends Equatable {
   factory FavoriteState.parse({
     required Map<String, dynamic> json,
   }) {
-    if (json.containsKey(key)) {
+    if (!json.containsKey(key)) {
       return const FavoriteState();
     }
     return FavoriteState(

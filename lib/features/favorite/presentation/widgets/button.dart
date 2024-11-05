@@ -16,7 +16,7 @@ class FavoriteButtonWidget extends StatelessWidget {
         final favorite = state.products.any((p) => p.like(text: slug));
         return CircleAvatar(
           radius: Dimension.radius.twelve,
-          backgroundColor: favorite ? theme.link : theme.link.withAlpha(25),
+          backgroundColor: favorite ? theme.link : theme.backgroundPrimary,
           child: IconButton(
             padding: const EdgeInsets.all(0),
             visualDensity: const VisualDensity(horizontal: -4, vertical: -4),

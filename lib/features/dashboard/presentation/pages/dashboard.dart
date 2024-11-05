@@ -37,27 +37,42 @@ class _DashboardPageState extends State<DashboardPage> {
       builder: (_, state) {
         final theme = state.scheme;
         return Scaffold(
-          backgroundColor: theme.backgroundSecondary,
           body: fragments.elementAt(index),
-          bottomNavigationBar: StyleProvider(
-            style: Style(),
-            child: ConvexAppBar(
-              initialActiveIndex: index,
-              backgroundColor: theme.positive,
-              elevation: 8,
-              items: const [
-                TabItem(icon: Icons.home),
-                TabItem(icon: Icons.featured_play_list_rounded),
-                TabItem(icon: Icons.favorite),
-                TabItem(icon: Icons.transform_rounded),
-                TabItem(icon: Icons.settings),
-              ],
-              onTap: (value) {
-                setState(() {
-                  index = value;
-                });
-              },
-            ),
+          backgroundColor: theme.backgroundPrimary,
+          bottomNavigationBar: BottomNavigationBar(
+            elevation: 8,
+            currentIndex: index,
+            backgroundColor: theme.primary,
+            type: BottomNavigationBarType.fixed,            
+            selectedItemColor: theme.black,
+            unselectedItemColor: theme.black.withAlpha(75),
+            items: const [
+              BottomNavigationBarItem(
+                label: 'Home',
+                icon: Icon(Icons.home),
+              ),
+              BottomNavigationBarItem(
+                label: 'Products',
+                icon: Icon(Icons.inventory_2_rounded),
+              ),
+              BottomNavigationBarItem(
+                label: 'Favorite',
+                icon: Icon(Icons.favorite),
+              ),
+              BottomNavigationBarItem(
+                label: 'Track',
+                icon: Icon(Icons.qr_code_scanner_rounded),
+              ),
+              BottomNavigationBarItem(
+                label: 'Settings',
+                icon: Icon(Icons.settings),
+              ),
+            ],
+            onTap: (value) {
+              setState(() {
+                index = value;
+              });
+            },
           ),
         );
       },

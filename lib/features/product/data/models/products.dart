@@ -79,7 +79,7 @@ class ProductsModel extends ProductEntity {
       'url': url,
       'categories': categories,
       'variants': variants.map((e) => e.toMap).toList(),
-      'discount': discount.toMap,
+      'discount': discount?.toMap,
     };
   }
 }

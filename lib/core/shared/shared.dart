@@ -56,3 +56,4 @@ export 'package:flutter/cupertino.dart' hide RefreshCallback;
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 export 'package:collection/collection.dart';
+export 'package:flutter_rating_bar/flutter_rating_bar.dart';
