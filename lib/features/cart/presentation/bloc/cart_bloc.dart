@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:vashoz/core/shared/extension/cart.dart';
-import 'package:vashoz/features/products/products.dart';
+import 'package:vashoz/features/product/product.dart';
 
 import '../../../../core/shared/shared.dart';
 import '../../cart.dart';

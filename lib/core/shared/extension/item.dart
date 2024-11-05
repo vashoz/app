@@ -1,4 +1,4 @@
-import 'package:vashoz/features/products/products.dart';
+import 'package:vashoz/features/product/product.dart';
 
 import '../../../features/cart/data/models/cart_item.dart';
 

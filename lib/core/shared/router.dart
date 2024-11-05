@@ -15,7 +15,7 @@ import '../../features/onboard/onboard.dart';
 import '../../features/orders/orders.dart';
 import '../../features/payment_method/payment_method.dart';
 import '../../features/product_details/product_details.dart';
-import '../../features/products/products.dart';
+import '../../features/product/product.dart';
 import '../../features/profile/profile.dart';
 import '../../features/reviews/reviews.dart';
 import '../../features/search/search.dart';

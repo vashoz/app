@@ -14,7 +14,7 @@ import '../../features/checkout/checkout.dart';
 import '../../features/payment_method/payment_method.dart';
 import '../../features/delivery_address/delivery_address.dart';
 import '../../features/shipping_method/shipping_method.dart';
-import '../../features/products/products.dart';
+import '../../features/product/product.dart';
 import '../../features/orders/orders.dart';
 import '../../features/product_details/product_details.dart';
 import '../../features/category/category.dart';

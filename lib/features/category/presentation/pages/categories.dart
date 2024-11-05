@@ -1,6 +1,6 @@
 import '../../../../core/config/config.dart';
 import '../../../../core/shared/shared.dart';
-import '../../../products/presentation/pages/products_by_category.dart';
+import '../../../product/presentation/pages/products_by_category.dart';
 import '../../category.dart';
 import '../widgets/shimmer/shimmer_categories.dart';
 

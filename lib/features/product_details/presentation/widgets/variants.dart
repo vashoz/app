@@ -1,6 +1,6 @@
 import 'package:vashoz/core/shared/shared.dart';
 
-import '../../../products/products.dart';
+import '../../../product/product.dart';
 import '../../../variant/variant.dart';
 
 class ProductDetailsVariants extends StatefulWidget {

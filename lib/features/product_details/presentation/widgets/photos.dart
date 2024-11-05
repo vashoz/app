@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:vashoz/core/shared/shared.dart';
 
-import '../../../products/products.dart';
+import '../../../product/product.dart';
 import '../../product_details.dart';
 
 class ProductDetailsPhotos extends StatefulWidget {

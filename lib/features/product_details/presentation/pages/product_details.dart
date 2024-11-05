@@ -7,8 +7,8 @@ import '../../../../core/shared/shared.dart';
 import '../../../cart/cart.dart';
 export 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../cart/data/models/cart_item.dart';
-import '../../../products/presentation/bloc/product_cart_bloc.dart';
-import '../../../products/products.dart';
+import '../../../product/presentation/bloc/product_cart_bloc.dart';
+import '../../../product/product.dart';
 import '../../../reviews/reviews.dart';
 import '../widgets/photos.dart';
 
@@ -135,8 +135,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 return Container(
                                   margin: EdgeInsets.only(right: Dimension.padding.horizontal.medium),
                                   width: context.width / 2,
-                                  child: ProductCard(
-                                    onPress: () {
+                                  child: ProductWidget(
+                                    onTap: () {
                                       context.pushNamed(
                                         ProductDetailPage.name,
                                         extra: {'model': productSlug},

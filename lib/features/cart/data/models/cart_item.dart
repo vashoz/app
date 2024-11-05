@@ -1,4 +1,4 @@
-import 'package:vashoz/features/products/products.dart';
+import 'package:vashoz/features/product/product.dart';
 
 import '../../../../core/shared/shared.dart';
 

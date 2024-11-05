@@ -1,7 +1,7 @@
 import '../../../../core/shared/shared.dart';
 import '../../dashboard.dart';
 import '../../../favorite/favorite.dart';
-import '../../../products/products.dart';
+import '../../../product/product.dart';
 import '../../../profile/profile.dart';
 import '../../../track_order/track_order.dart';
 
@@ -25,7 +25,7 @@ class _DashboardPageState extends State<DashboardPage> {
     fragments = [
       const DashboardWidget(),
       const ProductsFragment(),
-      FavoriteFragment(onPop: returnBack),
+      FavoritesWidget(onPop: returnBack),
       const TrackOrderFragment(),
       ProfileFragment(onPop: returnBack),
     ];

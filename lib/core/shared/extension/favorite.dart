@@ -1,9 +1,15 @@
 import '../../../features/favorite/favorite.dart';
 
-extension FavoriteEntityExtension on FavoriteEntity {
-  // TODO: Add extension methods
-}
+extension FavoriteStateExtension on FavoriteState {
+  FavoriteState copyWith({
+    List<String>? products,
+  }) {
+    return FavoriteState(
+      products: products ?? this.products,
+    );
+  }
 
-extension FavoriteModelExtension on FavoriteModel {
-  // TODO: Add extension methods
+  Map<String, dynamic> get toMap => {
+    FavoriteState.key : products,
+  };
 }

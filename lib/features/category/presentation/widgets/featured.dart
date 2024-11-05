@@ -1,7 +1,7 @@
 import '../../../../core/config/config.dart';
 import '../../../../core/shared/shared.dart';
 import '../../../dashboard/dashboard.dart';
-import '../../../products/products.dart';
+import '../../../product/product.dart';
 import '../../category.dart';
 
 class FeaturedCategoriesWidget extends StatelessWidget {
@@ -23,8 +23,11 @@ class FeaturedCategoriesWidget extends StatelessWidget {
               },
             ),
             Container(
-              height: Dimension.size.vertical.oneHundred,
-              margin: const EdgeInsets.all(0).copyWith(bottom: Dimension.padding.vertical.ultraMax),
+              height: Dimension.size.vertical.seventyTwo,
+              margin: const EdgeInsets.all(0).copyWith(
+                top: Dimension.padding.vertical.max,
+                bottom: Dimension.padding.vertical.ultraMax,
+              ),
               child: BlocBuilder<FindFeaturedCategoriesBloc, FindFeaturedCategoriesState>(
                 builder: (context, state) {
                   if (state is FindFeaturedCategoriesDone) {

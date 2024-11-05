@@ -1,8 +1,8 @@
 import '../../../../core/config/config.dart';
 import '../../../../core/shared/shared.dart';
 import '../../../product_details/product_details.dart';
-import '../../../products/presentation/bloc/product_cart_bloc.dart';
-import '../../../products/products.dart';
+import '../../../product/presentation/bloc/product_cart_bloc.dart';
+import '../../../product/product.dart';
 import 'section.dart';
 
 class NewArrivalProducts extends StatelessWidget {
@@ -57,8 +57,8 @@ class NewArrivalProducts extends StatelessWidget {
                         BlocProvider(
                             create: (context) => sl<ProductCartBloc>()),
                       ],
-                      child: ProductCard(
-                        onPress: () {
+                      child: ProductWidget(
+                        onTap: () {
                           context.pushNamed(
                             ProductDetailPage.name,
                             extra: {'model': state.products[index]},

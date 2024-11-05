@@ -1,12 +1,8 @@
-import 'package:vashoz/features/products/presentation/bloc/product_cart_bloc.dart';
-
 import '../../../../core/config/config.dart';
 import '../../../../core/shared/shared.dart';
+import '../../dashboard.dart';
+import '../../../product/product.dart';
 import '../../../product_details/product_details.dart';
-import '../../../products/presentation/pages/popular.dart';
-import '../../../products/presentation/widgets/shimmer/shimmer.dart';
-import '../../../products/products.dart';
-import 'section.dart';
 
 class PopularProducts extends StatelessWidget {
   const PopularProducts({super.key});
@@ -18,34 +14,34 @@ class PopularProducts extends StatelessWidget {
         if (state is PopularProductsLoading) {
           return Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: Dimension.padding.horizontal.max,
-                vertical: Dimension.padding.vertical.max),
+              horizontal: Dimension.padding.horizontal.max,
+              vertical: Dimension.padding.vertical.max,
+            ),
             child: const ShimmerProduct(),
           );
         } else if (state is PopularProductsDone) {
           return Column(
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: Dimension.padding.horizontal.max,
-                    vertical: Dimension.padding.vertical.max),
-                child: SectionHeaderWidget(
-                  icon: Icons.local_offer_rounded,
-                  title: "Popular Products",
-                  onSeeMore: () {
-                    context.pushNamed(
-                      PopularProductsPage.name,
-                      extra: {'slug': ""},
-                    );
-                  },
-                ),
+              SectionHeaderWidget(
+                icon: Icons.local_offer_rounded,
+                title: "Popular Products",
+                onSeeMore: () {
+                  context.pushNamed(
+                    PopularProductsPage.name,
+                    extra: {'slug': ""},
+                  );
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+              Container(
+                margin: const EdgeInsets.all(0).copyWith(
+                  top: Dimension.padding.vertical.max,
+                  bottom: Dimension.padding.vertical.ultraMax,
+                ),
                 child: GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: state.products.length,
+                  padding: const EdgeInsets.all(0),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 16,
@@ -55,14 +51,11 @@ class PopularProducts extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return MultiBlocProvider(
                       providers: [
-                        BlocProvider(
-                            create: (context) => sl<FindProductBloc>()
-                              ..add(FindProduct(slug: state.products[index]))),
-                        BlocProvider(
-                            create: (context) => sl<ProductCartBloc>()),
+                        BlocProvider(create: (context) => sl<FindProductBloc>()..add(FindProduct(slug: state.products[index]))),
+                        BlocProvider(create: (context) => sl<ProductCartBloc>()),
                       ],
-                      child: ProductCard(
-                        onPress: () {
+                      child: ProductWidget(
+                        onTap: () {
                           context.pushNamed(
                             ProductDetailPage.name,
                             extra: {'model': state.products[index]},
